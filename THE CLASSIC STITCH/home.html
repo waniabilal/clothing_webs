@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" >
+<link rel="stylesheet" href="style.css">
+<title>The CLASSIC stitch</title>
+</head>
+<body>
+  
+
+         <nav id="feature">
+          <div class="logo">
+           <a href=""> <img src="logo-Photoroom.png" alt="logo"></a>
+        </div>
+           <!-- Menu -->
+  <ul class="corner" id="menu">
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#collection" onclick="closeMenu()">Women's Clothing</a></li>
+    <li><a href="#reviews" onclick="closeMenu()">Reviews</a></li>
+    <li><a href="#return" onclick="closeMenu()">Return Policy</a></li>
+  </ul>
+                       
+                    <form action="/search" method="get">
+                  
+
+                    <div class="search-container">
+                       <i class="fas fa-search" id="searchIcon"></i>
+ <header class="top-bar">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search dress"
+    onkeyup="searchProducts()"
+  />
+</header>
+                    
+                    </div>
+
+                    </form>
+                    <!-- ----------------- -->
+                   <div class="cart-icon" onclick="toggleCart()">
+                    <i class="cart fas fa-shopping-cart"> <span id="cartCount">0</span></i>
+      </div>
+          <div class="header">
+
+  <!-- Hamburger / Close Icon -->
+  <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+     ☰
+  </div>
+ 
+
+<!-- Cart Sidebar -->
+<div id="cart">
+    <!-- <h3 style="color: black;">Your Cart</h3> -->
+    <ul id="cartItems"></ul>
+    <h4 style="color: black; font-size: 8px;">Total: Rs. <span id="totalPrice">0</span></h4>
+
+     <form id="checkoutForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" required></textarea>
+
+        <label for="size">Clothing Size:</label>
+        <select id="size" required>
+            <option value="">Select size</option>
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">XL</option>
+        </select>
+
+        <button class="buy-btn" onclick="buyNowWhatsApp()">Buy Now</button>
+        <button class="buy-btn" onclick="toggleCart()">Close</button>
+    </form>
+
+</div> 
+                    <!-- ------------------------ -->
+        </div>
+    </head>
+</nav>
+  
+
+  
+
+</div>
+
+ 
+   <!-- -----------------------HEADER---------------------- -->
+    <section id="about" class="about-sec">
+    <div class="about-container">
+        <div class="about-pic">
+            <img src="images/image2.jpg" alt="">
+            <h3>THE CLASSIC STITCH</h3>
+            <p>Where elegance meet Craftsmanship. Elegance in every thread, Style that speaks for itself & Quality never goes out of style.</p>
+            <p>We Deliver High Quality And Well Designed Clothing To Our Customers!👗</p>
+            <button  class="about-btn">SHOP NOW!</button>
+        </div>
+    </div>
+    
+</section>
+
+<!-- -----------------------------  -->
+<section id="collection">
+  <h3 class="col-text">Women's Clothing</h3>
+
+  <div class="product" data-name="red party wear red dress">
+    <img src="images/image4.jpg" alt="red party wear" width="150">
+    <h4>RED WEAR</h4>
+    <p>Rs. 5500</p>
+    <button class="buy-btn" onclick="addToCart('RED WEAR', 5500, 'images/image4.jpg')">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product" data-name="green dress party wear">
+    <img src="images/img6.jpg" alt="green dress" width="150">
+    <h4>GREEN DRESS</h4>
+    <p>Rs. 4500</p>
+    <button class="buy-btn" onclick="addToCart('GREEN DRESS', 4500, 'images/img6.jpg')">
+      Add to Cart
+    </button>
+  </div>
+
+</section>
+
+<!-- --------------REVIEWS---------------------- -->
+ <section id="reviews">
+    <div class="review-container">
+        <h3 class="heading-rev">Reviews</h3>
+        <div class="review-box">
+            <img src="whatsapp icon-Photoroom.png" alt="">
+            <h5>Laiba Mughal</h5>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>The fabric quality is excellent—soft, breathable, and feels premium. The size fits perfectly as the size chart. Completely satisfied with purchase. </p>
+        </div>
+        <div class="review-box2">
+            <img src="whatsapp icon-Photoroom.png" alt="">
+            <h5>Hamna malik</h5>
+           <p>⭐⭐⭐⭐⭐</p>
+          <p>Completely satisfied gorgeous.I love this dress! The color is vibrant, and the fabric feels luxurious.Delivery is quick and order is well packaged</p>
+        </div>
+        <div class="review-box3">
+            <img src="whatsapp icon-Photoroom.png" alt="">
+            <h5>Saima Ayub</h5>
+           <p>⭐⭐⭐⭐⭐</p>
+          <p>Really impressed with the stitching and fabric. The material feels durable yet comfortable, and the sizing is absolutely spot on.</p>
+        </div>
+        <div class="review-box4">
+            <img src="whatsapp icon-Photoroom.png" alt="">
+            <h5>Mehak Khan</h5>
+           <p>⭐⭐⭐⭐⭐</p>
+          <p>Delivered on time. Also the fabric is soft,elegant.Very awesome in material quality. I just love my parcel will order again. InshaALLAH</p>
+        </div>
+    </div>
+ </section>
+
+ <section id="return">
+    <div class="return-container">
+        <div class="return-box">
+            <h1>Return & Refund Policy</h1>
+            <div class="return-pol">
+             <p>At The Classic Stitch, we strive to ensure your complete satisfaction with every purchase. Please review our return and refund policy below.</p>
+
+   <h2>🔁 Return Eligibility</h2>
+
+  <p>We offer a 30-day return policy, which means you have 30 days from the date you receive your item to request a return or exchange.</p>
+
+<p>To be eligible for a return:</p>
+
+  <p>•The item must be unworn, unwashed, and unused </p>
+
+  <p>•Original tags must be intact</p>
+
+  <p>•The product must be returned in its original packaging</p>
+
+  <p>•A receipt or proof of purchase is required</p>
+
+
+<h2>💳 Refunds</h2>
+
+<p>Once we receive and inspect your returned item, we will notify you regarding the approval status of your refund.</p>
+
+<p>If approved, the refund will be processed to your original payment method within 10 business days</p>
+
+<p>Please note that processing times may vary depending on your bank or credit card provider</p>
+
+<p>
+  For any return-related questions, you may contact us at:
+  📧 <a href="mailto:shop.theclassicstitch@gmail.com">
+    shop.theclassicstitch@gmail.com
+  </a>
+</p>
+
+
+<h2>🚫 Non-Returnable Items</h2>
+
+<p>•Clearance or sale items</p>
+
+<p>•Customized or made-to-order products</p>
+
+<h2>⚠️ Final Note</h2>
+
+<p>The Classic Stitch reserves the right to accept or decline any return or exchange request after inspection of the returned item.</p>
+
+  <h1>Thank you for shopping with The Classic Stitch 🤍</h1>
+
+
+            </div>
+        </div>
+    </div>
+ </section>
+ 
+
+       <footer class="footer">
+        <p>Connect with us</p>
+
+         <div class="footer-links">
+         <!-- Facebook -->
+          <a href="https://www.facebook.com/share/14RcBEXhEAu/" target="_blank">
+              📘 Facebook
+          </a>
+
+          <!-- Instagram -->
+         <a href="https://www.instagram.com/theclassicstitch_official?igsh=MWttcmI0bHVpNnh5Mw==" target="_blank">
+           📸 Instagram
+          </a>
+          <!-- -------------Whatsapp----- -->
+         <a href="https://wa.me/message/UV2A27NF6B5BD1" target="_blank">
+           💬 Whatsapp
+          </a>
+
+          <!-- Phone -->
+         <a href="tel:03194111017">
+            📞 03194111017
+         </a>
+        </div>
+
+         <p class="copyright">
+       © 2026 The Classic Stitch. All Rights Reserved.
+        </p>
+</footer>
+<script src="script.js">
+
+</script>  
+</body>
+</html>
